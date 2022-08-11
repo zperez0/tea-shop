@@ -1,8 +1,11 @@
 import React from "react";
+import irohImage from "./../img/iroh.png";
 
-function Header(){
-  return(
-    <h1>Iroh's Tea Shop</h1>
+function Header() {
+  return (
+    <div>
+      <img src={irohImage} alt="Iroh's tea shop logo" className="img"/>
+    </div>
   );
 }
 
