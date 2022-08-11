@@ -1,20 +1,14 @@
 import React from "react";
 
-function Tea(){
-  const name = "Zuko's breath of fire"
-  const origin = "fire nation"
-  const type = 'chai tea'
-  const price = 12.99
-  const quantity = 130
+function Tea(props){
 
   return (
 <React.Fragment>
-  <h3>3a</h3>
-  <h3>{name}</h3>
-  <p>{origin}</p>
-  <p>{type}</p>
-  <p>${price}</p>
-  <p>{quantity} oz</p>
+  <h3>{props.name}</h3>
+  <p>{props.origin}</p>
+  <p>{props.type}</p>
+  <p>${props.price}</p>
+  <p>{props.quantity} oz</p>
 </React.Fragment>
   );
 }
