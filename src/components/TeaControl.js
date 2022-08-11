@@ -12,9 +12,15 @@ class TeaControl extends React.Component {
   }
 
   render(){
+    let currentlyVisibleState = null;
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewTeaForm />
+    } else {
+      currentlyVisibleState = <TeaList />
+    }
     return (
       <React.Fragment>
-
+        {currentlyVisibleState}
       </React.Fragment>
     );
   }
