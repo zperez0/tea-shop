@@ -6,10 +6,6 @@ function Tea(props) {
     <React.Fragment>
       <div onClick={() => props.whenTicketClicked(props.id)}>
         <h3>{props.name}</h3>
-        <p>{props.origin}</p>
-        <p>{props.type}</p>
-        <p>${props.price}</p>
-        <p>{props.quantity} oz</p>
       </div>
     </React.Fragment>
   );
