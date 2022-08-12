@@ -12,7 +12,6 @@ function EditTeaForm(props) {
       origin: event.target.origin.value,
       type: event.target.type.value,
       price: parseInt(event.target.price.value),
-      quantity: parseInt(event.target.quantity.value),
       id: tea.id,
     });
   }
