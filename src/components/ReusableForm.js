@@ -1,18 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Card from "./UI/Card";
+import "./ReusableForm.css";
 
 function ReusableForm(props) {
   return (
-    <React.Fragment>
-      <form onSubmit={props.formSubmissionHandler}>
-        <input type="text" name="name" placeholder="name" />
-        <input type="text" name="origin" placeholder="origin" />
-        <input type="text" name="type" placeholder="type" />
-        <input type="text" name="price" placeholder="price" />
-        <input type="text" name="quantity" placeholder="quantity" />
-        <button type="submit">{props.buttonText}</button>
-      </form>
-    </React.Fragment>
+    <div className="new-tea">
+      <div className="form-box">
+        <Card>
+          <form onSubmit={props.formSubmissionHandler}>
+            <div className="field1">
+              <input
+                type="text"
+                name="name"
+                placeholder="Zuko's Breath of Fire"
+              />
+              <input type="text" name="origin" placeholder="Fire Nation" />
+
+              <input type="text" name="type" placeholder="Chai Tea" />
+
+              <input type="text" name="price" placeholder="Price" />
+
+              <button type="submit">{props.buttonText}</button>
+            </div>
+          </form>
+        </Card>
+      </div>
+    </div>
   );
 }
 

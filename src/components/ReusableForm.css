@@ -1,0 +1,39 @@
+.new-tea {
+  background-color: #100c08;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 60rem;
+  max-width: 100%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0);
+}
+
+.new-tea button {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  margin: 1%;
+  font: inherit;
+  cursor: pointer;
+  background-color: #819c39;
+  color: white;
+  border-radius: 12px;
+}
+
+.new-tea button:hover,
+.new-tea button:active {
+  background-color: #94b23f;
+  border-color: #94b23f;
+}
+
+.form-box input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0.9vw 0;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+}
