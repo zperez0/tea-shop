@@ -1,11 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Card from "./UI/Card";
 
 function Tea(props) {
   return (
     <React.Fragment>
-      <div onClick={() => props.whenTeaClicked(props.id)}>
-        <h3>{props.name} - {props.type}</h3>
+      <div className="tea-list">
+        <Card>
+          <div onClick={() => props.whenTeaClicked(props.id)}>
+            <h3>
+              {props.name} - {props.type}
+            </h3>
+          </div>
+        </Card>
       </div>
     </React.Fragment>
   );
