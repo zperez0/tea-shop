@@ -14,9 +14,9 @@ A React application built to track the tea inventory of a fictional tea shop.
 ## Description
 This application was developed to utilize full CRUD functionality. Users can view tea details, add, update, and delete teas, and buy tea. When a user purchases a tea, the quantity is reduced by one oz.
 
-![tea shop image](src/img/tea-shop.png)
-![tea diagram image](src/img/tea-diagram.png)
+<img width='1491' alt="tea shop" src="./src/img/tea-shop.png">
 
+![tea diagram](./src/img/tea-diagram.png)
 ## Setup/Installation Requirements
 * _Go to [GitHub](https://github.com/zperez0/tea-shop.git)_
 * _Clone git repository to local machine_
