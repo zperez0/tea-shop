@@ -3,9 +3,9 @@ import irohImage from "./../img/iroh.png";
 
 function Header() {
   return (
-    <div>
-      <img src={irohImage} alt="Iroh's tea shop logo" className="img"/>
-    </div>
+    <React.Fragment>
+      <img src={irohImage} alt="Iroh's tea shop logo" className="img" />
+    </React.Fragment>
   );
 }
 
