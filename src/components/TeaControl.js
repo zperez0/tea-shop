@@ -11,7 +11,7 @@ class TeaControl extends React.Component {
       formVisibleOnPage: false,
       mainTeaList: [],
       selectedTea: null,
-      editing: false,
+      editing: false
     };
   }
 
@@ -21,6 +21,7 @@ class TeaControl extends React.Component {
         formVisibleOnPage: false,
         selectedTea: null,
         editing: false,
+        quantity: null
       });
     } else {
       this.setState((prevState) => ({
@@ -66,6 +67,15 @@ class TeaControl extends React.Component {
     });
   };
 
+  handlePurchasingTea = () => {
+    const editedMainTeaList = this.state.mainTeaList.filter((tea) => (tea.quantity -=1)
+    );
+    this.setState({
+      mainTeaList: editedMainTeaList,
+      editing: false
+    });
+  };
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -84,6 +94,7 @@ class TeaControl extends React.Component {
           tea={this.state.selectedTea}
           onClickingDelete={this.handleDeletingTea}
           onClickingEdit={this.handleEditClick}
+          onPurchasingTea={this.handlePurchasingTea}
         />
       );
       buttonText = "🌿Return to Tea List🌿";
