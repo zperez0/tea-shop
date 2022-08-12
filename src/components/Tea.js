@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 function Tea(props) {
   return (
     <React.Fragment>
-      <h3>{props.name}</h3>
-      <p>{props.origin}</p>
-      <p>{props.type}</p>
-      <p>${props.price}</p>
-      <p>{props.quantity} oz</p>
+      <div onClick={() => props.whenTicketClicked(props.id)}>
+        <h3>{props.name}</h3>
+        <p>{props.origin}</p>
+        <p>{props.type}</p>
+        <p>${props.price}</p>
+        <p>{props.quantity} oz</p>
+      </div>
     </React.Fragment>
   );
 }
@@ -18,7 +20,9 @@ Tea.propTypes = {
   origin: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  quantity: PropTypes.number.isRequired
+  quantity: PropTypes.number.isRequired,
+  id: PropTypes.string,
+  whenTicketClicked: PropTypes.func,
 };
 
 export default Tea;
