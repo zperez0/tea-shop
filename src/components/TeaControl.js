@@ -1,6 +1,7 @@
 import React from "react";
 import NewTeaForm from "./NewTeaForm";
 import TeaList from "./TeaList";
+import TeaDetail from "./TeaDetail";
 
 class TeaControl extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class TeaControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainTeaList: [],
+      selectedTea: null,
     };
   }
 
@@ -15,6 +17,13 @@ class TeaControl extends React.Component {
     this.setState((prevState) => ({
       formVisibleOnPage: !prevState.formVisibleOnPage,
     }));
+  };
+
+  handleChangingSelectedTea = (id) => {
+    const selectedTea = this.state.mainTeaList.filter(
+      (tea) => tea.id === id
+    )[0];
+    this.setState({ selectedTea: selectedTea });
   };
 
   handleAddingNewTeaToList = (newTea) => {
@@ -25,11 +34,22 @@ class TeaControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTeaForm onNewTeaCreation={this.handleAddingNewTeaToList} />;
+
+    if (this.state.selectedTea != null) {
+      currentlyVisibleState = <TeaDetail tea={this.state.selectedTea} />;
+      buttonText = "🌿Return to Tea List🌿";
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = (
+        <NewTeaForm onNewTeaCreation={this.handleAddingNewTeaToList} />
+      );
       buttonText = "🌿Return to Tea List🌿";
     } else {
-      currentlyVisibleState = <TeaList teaList={this.state.mainTeaList} />;
+      currentlyVisibleState = (
+        <TeaList
+          teaList={this.state.mainTeaList}
+          onTeaSelection={this.handleChangingSelectedTea}
+        />
+      );
       buttonText = "🌿Add Tea🌿";
     }
     return (
