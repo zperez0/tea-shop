@@ -1,39 +1,31 @@
 import React from "react";
 import Tea from "./Tea";
+import PropTypes from "prop-types";
 
-const mainTeaList = [
-  {
-    name: "Zuko's breath of fire",
-    origin: "fire nation",
-    type: "chai tea",
-    price: 12.99,
-    quantity: 130,
-  },
-  {
-    name: "Appa sip sip",
-    origin: "eastern air temple",
-    type: "chamomile tea",
-    price: 12.99,
-    quantity: 130,
-  },
-];
-
-function TeaList() {
+function TeaList(props) {
   return (
     <React.Fragment>
       <hr />
-      {mainTeaList.map((tea, index) => (
+      {props.teaList.map((tea) => (
         <Tea
+        whenTeaClicked={ props.onTeaSelection }
           name={tea.name}
           origin={tea.origin}
           type={tea.type}
           price={tea.price}
           quantity={tea.quantity}
-          key={index}
+          id={tea.id}
+          key={tea.id}
         />
       ))}
     </React.Fragment>
   );
 }
+
+TeaList.prototypes = {
+  teaList: PropTypes.array,
+  onTeaSelection: PropTypes.func
+};
+
 
 export default TeaList;
