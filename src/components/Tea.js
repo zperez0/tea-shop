@@ -24,7 +24,7 @@ Tea.propTypes = {
   type: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   id: PropTypes.string,
-  whenTicketClicked: PropTypes.func,
+  whenTeaClicked: PropTypes.func,
 };
 
 export default Tea;
