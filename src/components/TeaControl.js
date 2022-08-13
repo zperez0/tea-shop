@@ -66,10 +66,16 @@ class TeaControl extends React.Component {
     });
   };
 
-  handlePurchasingTea = () => {
-    const editedMainTeaList = this.state.mainTeaList.filter(
-      (tea) => (tea.quantity -= 1)
-    );
+  handlePurchasingTea = (id) => {
+    const selectedTea = this.state.mainTeaList.filter(
+      (tea) => tea.id === id
+    )[0];
+    selectedTea.quantity -= 1;
+
+    const editedMainTeaList = this.state.mainTeaList
+      .filter((tea) => tea.id !== id)
+      .concat(selectedTea);
+
     this.setState({
       mainTeaList: editedMainTeaList,
       editing: false,
@@ -94,7 +100,7 @@ class TeaControl extends React.Component {
           tea={this.state.selectedTea}
           onClickingDelete={this.handleDeletingTea}
           onClickingEdit={this.handleEditClick}
-          onPurchasingTea={this.handlePurchasingTea}
+          onClickingPurchase={this.handlePurchasingTea}
         />
       );
       buttonText = "🌿Return to Tea List🌿";
