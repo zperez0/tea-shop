@@ -1,6 +1,7 @@
 # Iroh's Tea Shop
 
-A React application built to track the tea inventory of a fictional tea shop.
+A React application built to track the tea inventory at the world's best tea shop located in Ba Sing Se.
+
 #### By _**Z Perez**_
 
 ## Technologies Used
@@ -12,11 +13,11 @@ A React application built to track the tea inventory of a fictional tea shop.
 * _Markdown_
 
 ## Description
-This application was developed to utilize full CRUD functionality. Users can view tea details, add, update, and delete teas, and buy tea. When a user purchases a tea, the quantity is reduced by one oz.
+This application was developed to utilize full CRUD functionality. Users can view tea details, add, update, and delete teas, and buy tea. When a user purchases a tea, the quantity is reduced by one ounce.
 
 ![TeaShop](src/img/TeaShop.png)
 
-#### Diagram
+## Diagram
 
 ![TeaDiagram](src/img/TeaDiagram.png)
 
