@@ -12,22 +12,22 @@ function NewTeaForm(props) {
       type: event.target.type.value,
       price: parseInt(event.target.price.value),
       quantity: parseInt(130),
-      id: v4()
+      id: v4(),
     });
   }
 
   return (
     <React.Fragment>
-      <ReusableForm 
-      formSubmissionHandler={handleNewTeaFormSubmission}
-      buttonText = "Submit"
+      <ReusableForm
+        formSubmissionHandler={handleNewTeaFormSubmission}
+        buttonText="Submit"
       />
     </React.Fragment>
   );
 }
 
-NewTeaForm.prototype = {
-  onNewTeaCreation: PropTypes.func
+NewTeaForm.propTypes = {
+  onNewTeaCreation: PropTypes.func,
 };
 
 export default NewTeaForm;
