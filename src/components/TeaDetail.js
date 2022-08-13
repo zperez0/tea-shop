@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Card from "./UI/Card";
 
 function TeaDetail(props) {
-  const { tea, onClickingDelete, onPurchasingTea } = props;
+  const { tea, onClickingDelete, onClickingPurchase, onClickingEdit } = props;
 
   return (
     <React.Fragment>
@@ -19,9 +19,9 @@ function TeaDetail(props) {
             {tea.quantity > 0 ? tea.quantity + " oz" : "Out of Stock"}
           </p>
           <div className="btn-detail">
-            <button onClick={props.onClickingEdit}>Update Tea</button>
+            <button onClick={onClickingEdit}>Update Tea</button>
             <button onClick={() => onClickingDelete(tea.id)}>Delete Tea</button>
-            <button onClick={() => onPurchasingTea(tea.id)}>Purchase</button>
+            <button onClick={() => onClickingPurchase(tea.id)}>Purchase</button>
           </div>
         </Card>
       </div>
