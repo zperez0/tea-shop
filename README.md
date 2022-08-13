@@ -16,6 +16,8 @@ This application was developed to utilize full CRUD functionality. Users can vie
 
 ![TeaShop](src/img/TeaShop.png)
 
+#### Diagram
+
 ![TeaDiagram](src/img/TeaDiagram.png)
 
 ## Setup/Installation Requirements
