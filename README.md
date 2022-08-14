@@ -15,6 +15,7 @@ A React application built to track the tea inventory at the world's best tea sho
 ## Description
 This application was developed to utilize full CRUD functionality. Users can view tea details, add, update, and delete teas, and buy tea. When a user purchases a tea, the quantity is reduced by one ounce.
 
+
 ![TeaShop](src/img/TeaShop.png)
 
 ## Diagram
@@ -48,7 +49,7 @@ http://localhost:3000/
 ```
 
 ## Known Bugs
-* _No known bugs._
+* _When a user updates a tea, they must complete each field. Otherwise, it will return empty fields and set the 'Availability' to 'Out of Stock'._
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
